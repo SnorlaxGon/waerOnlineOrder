@@ -19,6 +19,9 @@
           href="${pageContext.request.contextPath}/css/font-awesome/css/font-awesome.css">
     <script src="${pageContext.request.contextPath}/css/jquery-1.8.1.min.js"
             type="text/javascript"></script>
+    <script>
+
+    </script>
 </head>
 <body>
     <br action="${pageContext.request.contextPath}/SysRole/add">

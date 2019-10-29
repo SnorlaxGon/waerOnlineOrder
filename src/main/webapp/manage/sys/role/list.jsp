@@ -25,11 +25,11 @@
     <li><a href="#">角色管理</a> <span class="divider">/</span></li>
     <li class="active">角色列表</li>
 </ul>
-    <form action="${pageContext.request.contextPath}/SysRole/rolelist">
+    <a action="${pageContext.request.contextPath}/SysRole/list">
             <label>角色名：</label>
             <input type="text" name="rolename" value="${param.rolename}"/>
             <input type="submit" value="查找" />
-            <input type="button" value="增加" href="${pageContext.request.contextPath}">
+        <a href="${pageContext.request.contextPath}/SysRole/toadd"><input type="button" value="增加" ></a>
 <%--        <label>角色状态：</label>--%>
 <%--        <select name="rolestate">--%>
 <%--            <c:choose>--%>

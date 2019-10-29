@@ -73,20 +73,15 @@ public class SysRoleController {
      */
     @RequestMapping("/add")
     public String add(HttpServletRequest request){
-
         //获取表单数据
         String rolename = request.getParameter("rolename");
         String str_rolestate = request.getParameter("rolestate");
-
         //生成UUID
         String roleid = UUID.randomUUID().toString();
-
         //将数据封装到SysRole对象中
         SysRole sysRole = new SysRole(roleid,rolename,Integer.valueOf(str_rolestate));
-
         int rst = service.insert(sysRole);
-        System.out.println(rst);
-        return "sys/role/list";
+        return " sys/role/list";
     }
 
     /**
@@ -95,7 +90,7 @@ public class SysRoleController {
      * @param model
      * @return
      */
-    @RequestMapping("/toedit?roleid")
+    @RequestMapping("/toedit/{roleid}")
     public String toedit(@PathVariable String roleid,Model model){
         SysRole sysRole = service.selectById(roleid);
         model.addAttribute("sysrole",sysRole);
@@ -105,6 +100,7 @@ public class SysRoleController {
     public String edit(HttpServletRequest request,Model model){
         //获取
         String roleid = request.getParameter("roleid");
+        System.out.println(roleid);
         String rolename = request.getParameter("rolename");
         String str_rolestate = request.getParameter("rolestate");
 
@@ -116,9 +112,9 @@ public class SysRoleController {
 
         //
         if (rst > 0){
-            return "sys/role/list";
+            return this.list(model,request);
         }else {
-            return "sys/role/toedit?"+sysRole.getRoleid();
+            return this.toedit(roleid,model);
         }
 
     }

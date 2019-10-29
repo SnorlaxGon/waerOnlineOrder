@@ -81,6 +81,7 @@
             <th>下单时间</th>
             <th>订单状态</th>
             <th>结账金额</th>
+            <th>详细信息</th>
         </tr>
         </thead>
         <tbody>
@@ -99,8 +100,8 @@
                 </td>
                 <td>${odto.ordertotleprice}</td>
                 <td>
-                    <a href="${pageContext.request.contextPath }/orders/toedit/${odto.orderid}">编辑</a>
-                    <a href="${pageContext.request.contextPath }/orderdetail/list/${odto.orderid}">详细信息</a>
+                    <%--<a href="${pageContext.request.contextPath }/orders/toedit/${odto.orderid}">编辑</a>--%>
+                    <a href="${pageContext.request.contextPath }/orderdetail/list/${odto.orderid}">查看详细信息</a>
                 </td>
             </tr>
         </c:forEach>

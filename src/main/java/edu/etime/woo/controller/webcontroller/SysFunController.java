@@ -2,7 +2,6 @@ package edu.etime.woo.controller.webcontroller;
 
 import edu.etime.woo.dto.SysFunDto;
 import edu.etime.woo.pojo.SysFun;
-import edu.etime.woo.service.impl.SysFunServiceImpl;
 import edu.etime.woo.service.interfaces.SysFunService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,15 +33,10 @@ public class SysFunController {
      */
     @RequestMapping("/list")
     public String list(Model model){
-
         //service层进一步处理，接收返回值
         List<SysFunDto> funlist = service.selectList();
-
-        System.out.println(funlist.size());
-
         //model 向页面传递数据
         model.addAttribute("funlist",funlist);
-
         return "sys/fun/list";
     }
 
