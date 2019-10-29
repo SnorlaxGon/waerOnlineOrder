@@ -21,7 +21,7 @@
 <!--top-->
 <div class="itop">
     <div class="itop_left">
-        <h1 class="itop_left_h1_2">娃点餐后台管理系统</h1>
+        <h1 class="itop_left_h1_2">waer点餐后台管理系统</h1>
     </div>
     <div class="itop_right">
         <h3 class="itop_right_r">欢迎${sessionScope.LOGIN_USER.username}</h3>
