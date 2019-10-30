@@ -48,7 +48,8 @@
 
 <div style="padding: 24px 48px;">
     <h1>:)</h1>
-    <p>欢迎进入 <b>YQQLX后台管理系统</b>！</p>
+    <p>欢迎进入 <b>waer点餐后台管理系统</b>！</p>
+	<a href="${pageContext.request.contextPath}/user/findAll">查询用户信息</a>
 </div>
 
 
